@@ -1,0 +1,113 @@
+Current configuration : 1110 bytes
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R8
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!         
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!         
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 10.10.10.2 255.255.255.252
+!
+interface Ethernet0/1
+ ip address 20.20.20.1 255.255.255.252
+!
+interface Ethernet0/2
+ ip address 30.30.30.1 255.255.255.252
+!
+interface Ethernet0/3
+ ip address 90.90.90.2 255.255.255.252
+ ip ospf 2 area 0
+!
+!
+router eigrp 1
+ network 10.10.10.0 0.0.0.3
+ network 20.20.20.0 0.0.0.3
+ network 30.30.30.0 0.0.0.3
+ redistribute ospf 2 metric 10000 1000 255 1 1500
+ distance eigrp 90 110
+!
+router ospf 2
+ redistribute eigrp 1 subnets
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!         
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+!
+end

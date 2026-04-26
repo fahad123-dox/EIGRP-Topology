@@ -1,0 +1,105 @@
+R11#sh ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      1.0.0.0/32 is subnetted, 1 subnets
+D        1.1.1.1 [90/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+      2.0.0.0/8 is variably subnetted, 14 subnets, 8 masks
+D        2.2.2.2/32 [90/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+D        2.2.8.0/30 [90/409600] via 15.15.15.1, 00:20:43, Ethernet0/0
+D        2.2.9.0/29 [90/409600] via 15.15.15.1, 00:20:20, Ethernet0/0
+D        2.2.10.0/28 [90/409600] via 15.15.15.1, 00:20:08, Ethernet0/0
+D        2.2.11.0/27 [90/409600] via 15.15.15.1, 00:19:47, Ethernet0/0
+D        2.2.12.0/26 [90/409600] via 15.15.15.1, 00:19:36, Ethernet0/0
+D        2.2.13.0/25 [90/409600] via 15.15.15.1, 00:19:17, Ethernet0/0
+D        2.2.14.0/25 [90/409600] via 15.15.15.1, 00:19:11, Ethernet0/0
+D        2.2.15.0/25 [90/409600] via 15.15.15.1, 00:19:09, Ethernet0/0
+D        2.2.16.0/25 [90/409600] via 15.15.15.1, 00:19:05, Ethernet0/0
+D        2.2.17.0/25 [90/409600] via 15.15.15.1, 00:19:02, Ethernet0/0
+D        2.2.18.0/25 [90/409600] via 15.15.15.1, 00:18:58, Ethernet0/0
+D        2.2.19.0/25 [90/409600] via 15.15.15.1, 00:18:55, Ethernet0/0
+D        2.2.20.0/22 [90/409600] via 15.15.15.1, 00:18:52, Ethernet0/0
+      3.0.0.0/32 is subnetted, 1 subnets
+D        3.3.3.3 [90/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+      4.0.0.0/32 is subnetted, 1 subnets
+D        4.4.4.4 [90/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+      5.0.0.0/32 is subnetted, 1 subnets
+D        5.5.5.5 [90/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+      6.0.0.0/32 is subnetted, 1 subnets
+D        6.6.6.6 [90/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+      7.0.0.0/32 is subnetted, 1 subnets
+D        7.7.7.7 [90/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+D        10.1.1.1/32 [90/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+D        10.10.10.0/30 [90/307200] via 15.15.15.1, 00:32:03, Ethernet0/0
+      11.0.0.0/8 is variably subnetted, 8 subnets, 7 masks
+D EX     11.110.0.0/22 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     11.110.1.1/32 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     11.110.2.0/29 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     11.110.3.0/28 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     11.110.4.0/22 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     11.110.4.0/27 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     11.110.5.0/26 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     11.110.6.0/25 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+      15.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        15.15.15.0/30 is directly connected, Ethernet0/0
+L        15.15.15.2/32 is directly connected, Ethernet0/0
+      20.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+D        20.2.2.1/32 [90/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+D        20.20.20.0/30 [90/332800] via 15.15.15.1, 00:31:58, Ethernet0/0
+      30.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+D        30.3.3.2/32 [90/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+D        30.30.30.0/30 [90/332800] via 15.15.15.1, 00:31:58, Ethernet0/0
+      33.0.0.0/30 is subnetted, 4 subnets
+D EX     33.33.33.0 [170/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     33.33.33.4 [170/486400] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     33.33.33.8 [170/512000] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     33.33.33.12 [170/512000] via 15.15.15.1, 00:31:58, Ethernet0/0
+      40.0.0.0/8 is variably subnetted, 4 subnets, 2 masks
+D        40.4.4.4/32 [90/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     40.40.33.0/30 [170/537600] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     40.40.33.4/30 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     40.40.33.8/30 [170/563200] via 15.15.15.1, 00:31:58, Ethernet0/0
+      47.0.0.0/30 is subnetted, 1 subnets
+D        47.47.47.0 [90/358400] via 15.15.15.1, 00:31:58, Ethernet0/0
+      50.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+D        50.5.5.5/32 [90/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+D        50.50.50.0/30 [90/358400] via 15.15.15.1, 00:31:58, Ethernet0/0
+      60.0.0.0/32 is subnetted, 1 subnets
+D        60.6.6.6 [90/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+      70.0.0.0/32 is subnetted, 1 subnets
+D        70.7.7.7 [90/460800] via 15.15.15.1, 00:31:58, Ethernet0/0
+      77.0.0.0/30 is subnetted, 1 subnets
+D EX     77.77.77.0 [170/384000] via 15.15.15.1, 00:31:58, Ethernet0/0
+      96.0.0.0/29 is subnetted, 1 subnets
+D EX     96.96.96.0 [170/435200] via 15.15.15.1, 00:31:58, Ethernet0/0
+      100.0.0.0/30 is subnetted, 2 subnets
+D EX     100.10.10.0 [170/437760] via 15.15.15.1, 00:31:57, Ethernet0/0
+D EX     100.100.100.0 [170/2997760] via 15.15.15.1, 00:31:55, Ethernet0/0
+      140.40.0.0/30 is subnetted, 1 subnets
+D EX     140.40.40.0 [170/409600] via 15.15.15.1, 00:31:57, Ethernet0/0
+      150.0.0.0/30 is subnetted, 1 subnets
+D EX     150.0.150.0 [170/437760] via 15.15.15.1, 00:31:57, Ethernet0/0
+      192.168.0.0/30 is subnetted, 5 subnets
+D EX     192.168.0.0 [170/384000] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     192.168.0.4 [170/384000] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     192.168.0.8 [170/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     192.168.0.12 [170/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+D EX     192.168.0.16 [170/435200] via 15.15.15.1, 00:31:58, Ethernet0/0
+      196.196.196.0/30 is subnetted, 1 subnets
+D EX     196.196.196.0 [170/409600] via 15.15.15.1, 00:31:58, Ethernet0/0
+      200.20.20.0/30 is subnetted, 1 subnets
+D EX     200.20.20.0 [170/435200] via 15.15.15.1, 00:31:57, Ethernet0/0
+      210.210.210.0/30 is subnetted, 1 subnets
+D EX     210.210.210.0 [170/435200] via 15.15.15.1, 00:31:58, Ethernet0/0
+      220.30.30.0/30 is subnetted, 1 subnets
+D EX     220.30.30.0 [170/412160] via 15.15.15.1, 00:31:57, Ethernet0/0

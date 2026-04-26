@@ -1,0 +1,120 @@
+Building configuration...
+
+Current configuration : 1191 bytes
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Hq-hub
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!
+!
+!         
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!         
+redundancy
+!
+no cdp run
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 96.96.96.1 255.255.255.248
+!
+interface Ethernet0/1
+ ip address 196.196.196.2 255.255.255.252
+!         
+interface Ethernet0/2
+ ip address 210.210.210.1 255.255.255.252
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+!
+!
+router eigrp 78
+ network 96.96.96.0 0.0.0.7
+ redistribute eigrp 96
+ neighbor 96.96.96.2 Ethernet0/0
+ neighbor 96.96.96.3 Ethernet0/0
+!
+!
+router eigrp 96
+ network 196.196.196.0 0.0.0.3
+ network 210.210.210.0 0.0.0.3
+ redistribute eigrp 78
+ neighbor 196.196.196.1 Ethernet0/1
+ neighbor 210.210.210.2 Ethernet0/2
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+!
+end

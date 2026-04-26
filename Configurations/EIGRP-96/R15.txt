@@ -1,0 +1,131 @@
+Building configuration...
+
+Current configuration : 1574 bytes
+!
+! Last configuration change at 13:07:29 UTC Sun Apr 26 2026
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname R15
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+!
+!         
+!
+!
+!
+!
+!
+!
+
+
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+key chain keyFahad
+ key 96
+  key-string fahad
+!
+!         
+!
+!
+!
+!
+!
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ ip address 192.168.0.10 255.255.255.252
+ ip summary-address eigrp 96 11.110.0.0 255.255.252.0 leak-map ip-1
+!
+interface Ethernet0/1
+ ip address 192.168.0.14 255.255.255.252
+ ip summary-address eigrp 96 11.110.4.0 255.255.252.0 leak-map ip-6
+!
+interface Ethernet0/2
+ ip address 192.168.0.17 255.255.255.252
+ ip authentication mode eigrp 96 md5
+ ip authentication key-chain eigrp 96 keyFahad
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+!
+!
+router eigrp 96
+ network 192.168.0.8 0.0.0.3
+ network 192.168.0.12 0.0.0.3
+ network 192.168.0.16 0.0.0.3
+ neighbor 192.168.0.9 Ethernet0/0
+ neighbor 192.168.0.13 Ethernet0/1
+ neighbor 192.168.0.18 Ethernet0/2
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+!
+route-map ip-6 permit 10
+ match ip address 6
+!
+route-map ip-1 permit 10
+ match ip address 1
+!
+!
+access-list 1 permit 11.110.1.1
+access-list 6 permit 11.110.6.0 0.0.0.127
+!
+control-plane
+!
+!
+!         
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+line aux 0
+line vty 0 4
+ login
+ transport input none
+!
+!
+end
