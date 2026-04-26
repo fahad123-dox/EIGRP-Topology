@@ -1,7 +1,7 @@
 # 🏗️ EIGRP & OSPF Multi-Protocol Infrastructure Lab
 ![FULL NETWORK TOPOLOGY](./Topology-Snapshots/Topology.png)
 ## 🌐 Project Overview
-This repository contains the complete design, configuration, and troubleshooting documentation for a large-scale network lab. The project focuses on the integration of disparate routing domains and the technical challenges of **Mutual Redistribution** across a complex topology.
+This repository contains the complete design, configuration, and troubleshooting documentation for a large-scale EIGRP oriented network lab. The project focuses on the integration of disparate routing domains and the technical challenges of **Mutual Redistribution** across a complex topology.
 
 **Key Technical Pillars:**
 * **EIGRP Named Mode (AS e4033, e3340):** Modernized EIGRP deployment.
