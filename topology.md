@@ -13,9 +13,9 @@ The lab is divided into several specialized routing domains to simulate a divers
 * **Configuration**
 * **Router 1**
 * ![Router 1](./Topology-Snapshots/OSPF/R1.png)
-* * **Router 2**
+* **Router 2**
 * ![Router 2](./Topology-Snapshots/OSPF/R2.png)
-* * **Router 8**
+* **Router 8**
 * ![Router 8](./Topology-Snapshots/OSPF/R8.png)
 
 
@@ -25,17 +25,51 @@ The lab is divided into several specialized routing domains to simulate a divers
 * **Features:** Utilizes **Static Neighborships** to eliminate multicast overhead and **VLSM Summarization** to keep the routing table lean.
 * **Key Routers:** R5, R12,R13,R14,R15,R16, HQ-Hub,R10,R21,.
 * **Router 5**
-* ![Router 5](./Topology-Snapshots/EIGRP-96/R5.png)
-   * **Router 5 EIGRP NEIGHBORS**
-* ![Router 5 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R5-EIGRP-neighbors.png)
+  * ![Router 5](./Topology-Snapshots/EIGRP-96/R5.png)
+  * **Router 5 EIGRP NEIGHBORS**
+  * ![Router 5 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R5-EIGRP-neighbors.png)
 
 * **Router 16**
-* ![Router 16](./Topology-Snapshots/EIGRP-96/R16.png)
+  * ![Router 16](./Topology-Snapshots/EIGRP-96/R16.png)
+  * **Router 16 EIGRP NEIGHBORS**
+   * ![Router 15 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R16-EIGRP-neighbors.png)
+  
 * **Router 21**
-* ![Router 21](./Topology-Snapshots/EIGRP-96/R21.png)
-* **Router 16**
-* ![Router 16](./Topology-Snapshots/EIGRP-96/R16.png)
+  * ![Router 21](./Topology-Snapshots/EIGRP-96/R21.png)
+  * **Router 21 EIGRP NEIGHBORS**
+  * ![Router 21 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R21-EIGRP-neighbors.png)
 
+* **Router 15**
+  * ![Router 15](./Topology-Snapshots/EIGRP-96/R15.png)
+  * **Router 15 Key Chain**
+  * ![Router 15 Key Chain](./Topology-Snapshots/EIGRP-96/R15-key-chain.png)
+  * **Router 15 Leak Map Result**
+  * ![Router 15 Leak Map Result](./Topology-Snapshots/EIGRP-96/R15-leak-map-result.png)
+  * **Router 15 EIGRP NEIGHBORS**
+  * ![Router 15 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R15-EIGRP-neighbors.png)
+ 
+* **Router 14**
+  * ![Router 14](./Topology-Snapshots/EIGRP-96/R14.png)
+  * **Router 14 EIGRP NEIGHBORS**
+  * ![Router 14 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R14-EIGRP-neighbors.png)
+
+* **Router 13**
+  * ![Router 13](./Topology-Snapshots/EIGRP-96/R13.png)
+  * **Router 13 EIGRP NEIGHBORS**
+  * ![Router 13 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R13-EIGRP-neighbors.png)
+
+* **Router 12**
+  * ![Router 12](./Topology-Snapshots/EIGRP-96/R12.png)
+  * **Router 12 EIGRP NEIGHBORS**
+  * ![Router 12 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R12-EIGRP-neighbors.png)
+
+* **Router 10**
+  * ![Router 10](./Topology-Snapshots/EIGRP-96/R10.png)
+  * **Router 10 EIGRP NEIGHBORS**
+  * ![Router 10 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-96/R10-EIGRP-neighbors.png)
+
+* **HQ-HUB**
+  * ![HQ-HUB](./Topology-Snapshots/EIGRP-96/HQ-HUB.png)
 
 ### **3. EIGRP Named Mode (Purple/Yellow Zones)**
 * **Role:** Modernized EIGRP implementation using Address Families.
