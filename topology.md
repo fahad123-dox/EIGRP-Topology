@@ -71,6 +71,35 @@ The lab is divided into several specialized routing domains to simulate a divers
 * **HQ-HUB**
   * ![HQ-HUB](./Topology-Snapshots/EIGRP-96/HQ-HUB.png)
 
+### **3. EIGRP 1 (Red Zones)**
+![EIGRP-96 topology](./Topology-Snapshots/EIGRP-1/topology.png)
+* **Role:** The primary redistribution domain and the site of the RIB conflict.
+* **Features:** Implemented EIGRP Route filtering
+* **Key Routers:** R10, R11, R7, R8, R9.
+
+* **Router 10**
+  * ![Router 10](./Topology-Snapshots/EIGRP-1/R10.png)
+  * **Router 10 Metric Range**
+  * ![Router 10 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-1/R10-metric-metric-range.png)
+
+* **Router 11**
+  * ![Router 11](./Topology-Snapshots/EIGRP-1/R11.png)
+  * **Router 11 Traceroute To OSPF Domain**
+  * ![Router 11 Traceroute To OSPF Domain](./Topology-Snapshots/EIGRP-1/R11-traceroute-to-ospf-domain.png)
+
+* **Router 7**
+  * ![Router 7](./Topology-Snapshots/EIGRP-1/R7.png)
+
+* **Router 8**
+  * ![Router 8](./Topology-Snapshots/EIGRP-1/R8.png)
+
+* **Router 9**
+  * ![Router 9](./Topology-Snapshots/EIGRP-1/R9.png)
+  * **Router 9 Loopback Internal Block**
+  * ![Router 9 Loopback Internal Block](./Topology-Snapshots/EIGRP-1/R9-loopback-internal-block.png)
+
+
+    
 ### **3. EIGRP Named Mode (Purple/Yellow Zones)**
 * **Role:** Modernized EIGRP implementation using Address Families.
 * **Instances:** `e4033` and `e3340`.
