@@ -9,7 +9,7 @@ The lab is divided into several specialized routing domains to simulate a divers
 ![OSPF topology](./Topology-Snapshots/OSPF/topology.png)
 * **Role:** Acts as the primary transit backbone for the core.
 * **Area Design:** Features Area 0.
-* **Key Routers:** R1, R2, and R8.
+* **Key Routers:** **[R1](./Configurations/OSPF/R1.txt)** , **[R2](./Configurations/OSPF/R2.txt)** ,  **[R8](./Configurations/OSPF/R8.txt)**
 * **Configuration**
 * **Router 1**
 * ![Router 1](./Topology-Snapshots/OSPF/R1.png)
@@ -17,13 +17,14 @@ The lab is divided into several specialized routing domains to simulate a divers
 * ![Router 2](./Topology-Snapshots/OSPF/R2.png)
 * **Router 8**
 * ![Router 8](./Topology-Snapshots/OSPF/R8.png)
+* **Routers Configurations**
 
-
+ 
 ### **2. EIGRP 96 (Orange Zone)**
 ![EIGRP-96 topology](./Topology-Snapshots/EIGRP-96/topology.png)
 * **Role:** Highly controlled stub/specialized site.
 * **Features:** Utilizes **Static Neighborships** to eliminate multicast overhead and **VLSM Summarization** to keep the routing table lean.
-* **Key Routers:** R5, R12,R13,R14,R15,R16, HQ-Hub,R10,R21,.
+* **Key Routers:** **[R5](./Configurations/EIGRP-96/R5.txt)** , **[R12](./Configurations/EIGRP-96/R12.txt)** , **[R13](./Configurations/EIGRP-96/R13.txt)** , **[R14](./Configurations/EIGRP-96/R14.txt)** , **[R15](./Configurations/EIGRP-96/R15.txt)** , **[R16](./Configurations/EIGRP-96/R16.txt)** , **[HQ-Hub](./Configurations/EIGRP-96/HQ-HUB.txt)** , **[R10](./Configurations/EIGRP-96/R10.txt)** , **[R21](./Configurations/EIGRP-96/R21.txt)**.
 * **Router 5**
   * ![Router 5](./Topology-Snapshots/EIGRP-96/R5.png)
   * **Router 5 EIGRP NEIGHBORS**
@@ -71,12 +72,13 @@ The lab is divided into several specialized routing domains to simulate a divers
 * **HQ-HUB**
   * ![HQ-HUB](./Topology-Snapshots/EIGRP-96/HQ-HUB.png)
 
-### **3. EIGRP 1 (Red Zones)**
+### **3. EIGRP 1 (Pink Zones)**
 ![EIGRP-96 topology](./Topology-Snapshots/EIGRP-1/topology.png)
 * **Role:** The primary redistribution domain and the site of the RIB conflict.
 * **Features:** Implemented EIGRP Route filtering
-* **Key Routers:** R10, R11, R7, R8, R9.
-
+* **Key Routers:**  **[R10](./Configurations/EIGRP-1/R10.txt)** , **[R11](./Configurations/EIGRP-1/R11.txt)**, **[R7,](./Configurations/EIGRP-1/R7.txt)** , **[R8](./Configurations/OSPF/R8.txt)** ,  **[R9](./Configurations/EIGRP-1/R9.txt)**.
+* **NOTE:** IP route snapshots for all EIGRP 1 routers are available in the **[Config folder](./Configurations/EIGRP-1/)** to review aside from R8.
+* 
 * **Router 10**
   * ![Router 10](./Topology-Snapshots/EIGRP-1/R10.png)
   * **Router 10 Metric Range**
@@ -97,65 +99,90 @@ The lab is divided into several specialized routing domains to simulate a divers
   * ![Router 9](./Topology-Snapshots/EIGRP-1/R9.png)
   * **Router 9 Loopback Internal Block**
   * ![Router 9 Loopback Internal Block](./Topology-Snapshots/EIGRP-1/R9-loopback-internal-block.png)
+  * **Router 9 Access List Block Route from e0/1 port**
+  * ![Router 9 Loopback Internal Block](./Topology-Snapshots/EIGRP-1/R9-access-list-block-route-from-e01.png)
+
+### **4. EIGRP 101(Green Zone)**
+![EIGRP-101 topology](./Topology-Snapshots/EIGRP-101/topology.png)
+* **Features:**  EIGRP Load balancing implementation using Offset as well as Variance.
+* **Key Routers:** **[R2](./Configurations/EIGRP-101/R2.txt)** , **[R3](./Configurations/EIGRP-101/R3.txt)**, **[R4](./Configurations/EIGRP-101/R4.txt)** , **[R5](./Configurations/EIGRP-101/R5.txt)** , **[R6](./Configurations/EIGRP-101/R6.txt)**.
+
+* **Router 2**
+  * ![Router 2](./Topology-Snapshots/EIGRP-101/R2.png)
+
+* **Router 3**
+  * ![Router 3](./Topology-Snapshots/EIGRP-101/R3.png)
+
+* **Router 4**
+  * ![Router 4](./Topology-Snapshots/EIGRP-101/R4.png)
+
+* **Router 5**
+  * ![Router 5](./Topology-Snapshots/EIGRP-101/R5.png)
+
+* **Router 6**
+  * ![Router 6](./Topology-Snapshots/EIGRP-101/R6.png)
+
+### **4. EIGRP Hub & Spoke topology (RED Zone)**
+![EIGRP-HUB&SPOKE topology](./Topology-Snapshots/Hub%20%26%20Spoke%20topology/topology.png)
+* **Features:**  EIGRP Hub and Spoke Topology implementated for monitioring of the data using a central device.
+* **Key Routers:** **[Hub](./Configurations/Hub%20%26%20Spoke%20topology/hub-config.txt)** , **[Br-Spoke-1](./Configurations/Hub%20%26%20Spoke%20topology/Br-spoke-1.txt)** , **[Br-Spoke-2](./Configurations/Hub%20%26%20Spoke%20topology/Br-spoke-2.txt)**.  
+
+* **HUB **
+  * ![Hub](./Topology-Snapshots/Hub%20%26%20Spoke%20topology/hub.png)
+
+* **Br-spoke-1 **
+  * ![Br-spoke-1](./Topology-Snapshots/Hub%20%26%20Spoke%20topology/Br-spoke-1.png)
+
+* **Br-spoke-2 **
+  * ![Br-spoke-2](./Topology-Snapshots/Hub%20%26%20Spoke%20topology/Br-spoke-2.png)
 
 
-    
 ### **3. EIGRP Named Mode (Purple/Yellow Zones)**
 * **Role:** Modernized EIGRP implementation using Address Families.
 * **Instances:** `e4033` and `e3340`.
 * **Features:** Demonstrates the scalability of Named Mode configuration over Classic EIGRP.
+* ### ***EIGRP E3340**
+![EIGRP-E3340 topology](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/topology.png)
+* **Key Routers:** **[R21](./Configurations/EIGRP-NAMED-mode-e3340/R21.txt)** , **[R22](./Configurations/EIGRP-NAMED-mode-e3340/R22.txt)** , **[R23](./Configurations/EIGRP-NAMED-mode-e3340/R23.txt)** , **[R24](./Configurations/EIGRP-NAMED-mode-e3340/R24.txt)**.
+* * **Router 21**
+  * ![Router 21](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R21.png)
+  * **Router 21 EIGRP NEIGHBORS**
+  * ![Router 21 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R21-eigrp-neighbors.png)
+* * **Router 22**
+  * ![Router 22](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R22.png)
+  * **Router 22 EIGRP NEIGHBORS**
+  * ![Router 22 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R22-eigrp-neighbors.png)
+* * **Router 23**
+  * ![Router 23](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R23.png)
+  * **Router 23 EIGRP NEIGHBORS**
+  * ![Router 23 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R23-eigrp-neighbors.png)
+* * **Router 24**
+  * ![Router 24](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R24.png)
+  * **Router 24 EIGRP NEIGHBORS**
+  * ![Router 24 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e3340/R24-eigrp-neighbors.png)
+    
+* ### ***EIGRP E4033**
+![EIGRP-E3340 topology](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/topology.png)
+* **Key Routers:** **[R25](./Configurations/EIGRP-NAMED-mode-e4033/R25.txt)** , **[R26](./Configurations/EIGRP-NAMED-mode-e4033/R26.txt)** , **[R27](./Configurations/EIGRP-NAMED-mode-e4033/R27.txt)** , **[R28](./Configurations/EIGRP-NAMED-mode-e4033/R28.txt)**.
 
-### **4. EIGRP 1 (Red Zone)**
-* **Role:** The primary redistribution domain and the site of the RIB conflict.
+* * **Router 25**
+  * ![Router 25](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R25.png)
+  * **Router 25 EIGRP NEIGHBORS**
+  * ![Router 25 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R25-eigrp-neighbors.png)
 
----
-
-## 🔬 Control Plane Case Study: R8 Boundary
-
-### **The Race Condition**
-A critical "Internal Battle" was observed at R8. Because R8 was connected to both OSPF (Area 0) and EIGRP 1, it received information for the same network from two different Gatherers.
-
-
-
-| Gatherer | Path Source | AD Offer | Status in RIB |
-| :--- | :--- | :--- | :--- |
-| **OSPF** | R1 (Direct) | 110 | **Winner (Installed)** |
-| **EIGRP** | R10 (Indirect) | 170 | **Loser (Backup)** |
-
-### **The Redistribution Trap**
-Because the RIB (The Judge) only accepts the OSPF route, the `redistribute ospf` command exported that OSPF-sourced route into the EIGRP domain. This caused R7 to believe the best path was through R8, leading to sub-optimal routing.
-
----
-
-## 📊 Verification Evidence
-
-### **1. Redistribution Metric Steering**
-To ensure the "Exporter" (Redistribution) sent the correct cost information into EIGRP, the following seed metric was applied at R8:
-`redistribute ospf 2 metric 10000 1000 255 1 1500`
-
-
-
-* **Bandwidth:** 10,000 Kbit
-* **Delay:** 1,000 (10ms)
-* **Resulting Metric:** 512,000
-
-### **2. Packet Capture Verification**
-Live captures were taken on the R8-R7 link to confirm protocol behavior.
-
-* **Capture - Loop Identified:** `Live-packet-capture of EIGRP with the OSPF routes sharing problem.jpg`
-  * *Observation:* The packet capture shows EIGRP Update packets carrying routes with an **External Protocol ID: OSPF (6)**. This proves R8 was "seduced" by the OSPF route.
-
-* **Capture - Fix Verified:** `Live-packet-capture of EIGRP with the Solved-OSPF routes sharing problem.jpg`
-  * *Observation:* After the AD adjustment to 110 on R8, the capture shows R8 correctly advertising the **Native EIGRP** path, effectively stopping the OSPF flood.
-
----
-
-## 🛡️ Stability Mechanisms
-
-### **Route Filtering at R11**
-To prevent "Mutual Feedback" (where a redistributed route enters another redistribution point), a Distribute-List was applied:
-```text
-route-map filter-source deny 10
- match source-protocol ospf 2
-!
-route-map filter-source permit 20
+* * **Router 26**
+  * ![Router 26](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R26.png)
+  * **Router 26 EIGRP NEIGHBORS**
+  * ![Router 26 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R26-eigrp-neighbors.png)
+  
+* * **Router 27**
+  * ![Router 27](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R27.png)
+  * **Router 27 EIGRP NEIGHBORS**
+  * ![Router 27 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R27-eigrp-neighbors.png)
+  
+* * **Router 28**
+  * ![Router 28](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R28.png)
+  * **Router 28 EIGRP NEIGHBORS**
+  * ![Router 28 EIGRP NEIGHBORS](./Topology-Snapshots/EIGRP-NAMED-mode-e4033/R28-eigrp-neighbors.png)
+  
+    
