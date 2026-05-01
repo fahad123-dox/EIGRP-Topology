@@ -29,9 +29,9 @@ I manually realigned the **Trust Hierarchy** by adjusting the **Administrative D
 
 ## 📂 Project Structure & Evidence
 * **[Topology Analysis](./topology.md):** A deep-dive into the design, packet captures, and routing logic.
-* **`/Configurations`:** Complete `.txt` running-configs for all routers (R1 through R28).
-* **`/Topology-Snapshots`:** High-resolution topology maps and CLI verification screenshots.
-* **`/Troubleshooting-Evidence`:** Live Wireshark packet captures showing EIGRP update packets and "before/after" routing tables.
+* **[Configurations](./Configurations):** Complete `.txt` running-configs for all routers (R1 through R28).
+* **[Topology-Snapshots](./Topology-Snapshots):** High-resolution topology maps and CLI verification screenshots.
+* **[Troubleshooting-Analysis](./Troubleshooting.md):**  Technical deep-dive into a complex Sub optimal routing routes problem encountered at the boundary of EIGRP 1 and OSPF 2.
 
 ---
 
@@ -45,4 +45,4 @@ I manually realigned the **Trust Hierarchy** by adjusting the **Administrative D
 ### **About the Author**
 Networking Trainee specializing in enterprise routing/switching. I focus on a "why-first" analytical approach to troubleshooting to build elite-level network infrastructures.
 
-#Cisco #Networking #EIGRP #OSPF #Routing #NetworkEngineering #CCIEJourney
+#Cisco #Networking #EIGRP #OSPF #Routing #NetworkEngineering 
