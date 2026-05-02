@@ -38,7 +38,7 @@ I manually realigned the **Trust Hierarchy** by adjusting the **Administrative D
 ## 🚀 How to Use This Repo
 1.  **Analyze the Topology:** View `topology.png` in the snapshots folder to understand the network layout.
 2.  **Review Configurations:** Check the `/Configurations` folder for specific protocol implementations.
-3.  **Troubleshooting Insight:** Refer to the `troubleshooting-evidence.md` file to see how AD manipulation and route filtering solve redistribution loops.
+3.  **Troubleshooting Insight:** Refer to the `troubleshooting.md` file to see how AD manipulation and route filtering solve sub optimal routes redistribution.
 
 ---
 
